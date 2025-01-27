@@ -9,11 +9,11 @@ const Paths = () => {
             <Routes>
                 <Route path="/" element={<DashboardLayout />}>
                     <Route index element={<Home />} />
-                <Route path="/login" element={<Login/>}/>
+                    <Route path="/login" element={<Login />} />
                 </Route>
             </Routes>
         </BrowserRouter>
     );
 }
- 
+
 export default Paths;

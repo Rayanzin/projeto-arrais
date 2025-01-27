@@ -9,14 +9,16 @@ const Login = () => {
                 <Input className="mb-3"
                     placeholder="Enter your username"
                     prefix={
-                        <UserOutlined className="text-black/25"/>
+                        <UserOutlined className="text-black/25" />
                     }
                 />
                 <Input.Password className="mb-3" placeholder="input password" />
-                <Button type="primary" className="bg-laranja hover:!bg-laranja2">
-                    <a href="/">Voltar</a>
-                </Button>
-                <Button type="primary" className="bg-laranja hover:!bg-laranja2">Entrar</Button>
+                <div className="flex justify-between *:w-[48%]">
+                    <Button type="primary" className="bg-laranja hover:!bg-laranja2">
+                        <a href="/">Voltar</a>
+                    </Button>
+                    <Button type="primary" className="bg-laranja hover:!bg-laranja2">Entrar</Button>
+                </div>
             </form>
         </div>
     );
