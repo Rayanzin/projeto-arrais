@@ -18,9 +18,9 @@ const Header = () => {
             {
                 usuario ? (
                     <>
-                        <h6 className="text-lg">{usuario.nome}</h6>
-                        <h6>{usuario.cargo}</h6>
-                        <button className="mt-6 p-[0] w-full bg-laranja hover:!bg-laranja2" onClick={() => setUsuario()}>sair</button>
+                        <h6 className="text-lg">{usuario.NM_USUARIO}</h6>
+                        <h6>{usuario.NM_CARGO}</h6>
+                        <Button type="primary" size="large" className="text-white w-full p-[0px] bg-laranja hover:!bg-laranja2" onClick={() => { setUsuario(); sessionStorage.removeItem("usuario") }}>sair</Button>
                     </>
                 ) : (
                     <Button href="/login" type="primary" size="large" className="mt-6 p-[0] w-full bg-laranja hover:!bg-laranja2">

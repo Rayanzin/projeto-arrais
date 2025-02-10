@@ -3,10 +3,11 @@ import { createContext, useState } from "react";
 export const LoginContext = createContext()
 
 const LoginProvider = ({ children }) => {
-    const [usuario, setUsuario] = useState({
-        nome: "Edmilson",
-        cargo: "Admin"
-    })
+
+const sessionData = sessionStorage.getItem("usuario") ? JSON.parse(sessionStorage.getItem("usuario")) : null
+
+    const [usuario, setUsuario] = useState(sessionData)
+
     return (
         <LoginContext.Provider value={{usuario, setUsuario}}>
             {children}
